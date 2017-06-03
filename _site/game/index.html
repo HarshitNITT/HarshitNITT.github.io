@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<head>
+<title>
+game
+</title>
+</head>
+<style>
+*
+{
+padding: 0;
+margin: 0;
+}
+canvas
+{
+background: #eee;
+display: block;
+margin: 0 auto;
+
+
+   .button {
+              -moz-box-shadow: 0px 10px 14px -7px #276873;
+              -webkit-box-shadow: 0px 10px 14px -7px #276873;
+              box-shadow: 0px 10px 14px -7px #276873;
+              background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+              background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+              background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+              background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+              background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+              background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+              filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+              background-color:#599bb3;
+              -moz-border-radius:8px;
+              -webkit-border-radius:8px;
+              border-radius:8px;
+              display:inline-block;
+              cursor:pointer;
+              color:#ffffff;
+              font-family:arial;
+              font-size:20px;
+              font-weight:bold;
+              padding:13px 32px;
+              text-decoration:none;
+              text-shadow:0px 1px 0px #3d768a;
+          }
+           .button:hover {
+              background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+              background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+              background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+              background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+              background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+              background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+              filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+              background-color:#408c99;
+          }
+         .button:active {
+              position:relative;
+              top:1px;
+          }
+
+}
+
+
+ 
+body
+{
+text-align: middle;
+margin: 0 auto;
+
+}
+</style>
+<body>
+
+
+<button  onclick="myt()">koi</button>
+<canvas id="myCanvas" width=726 height=740 ></canvas>
+<p id="demo"></p>
+
+<script>
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.rect(50,40,50,50);
+ctx.fillStyle = "green";
+ctx.fill();
+var s=Math.floor((Math.random() * 100) + 1);
+var f=s.toString();
+ctx.fillText(f,75,25);
+ctx.closePath();
+
+
+ctx.beginPath();
+ctx.rect(130,40,50,50);
+ctx.fillStyle = "blue";
+ctx.fill();
+var s=Math.floor((Math.random() * 100) + 1);
+var f=s.toString();
+ctx.fillText(f,155,25);
+ctx.closePath();
+ctx.beginPath();
+ctx.rect(210,40,50,50);
+ctx.fillStyle = "blue";
+ctx.fill();
+var s=Math.floor((Math.random() * 100) + 1);
+var f=s.toString();
+ctx.fillText(f,235,25);
+ctx.closePath();
+
+
+function myt(){
+var t=0;
+var m=0;
+var interval = setInterval(function(){
+   t++;
+   if(t==500)
+     {
+      clearInterval(interval);
+      }
+if(t==499)
+{
+      var g=histimer();
+var we=yourTimer();
+var l=myTimer();
+if(g==we && g==l)
+{
+m++;
+}
+
+}
+
+else
+{
+histimer();
+yourTimer();
+myTimer(); 
+}
+if(m==1)
+{
+document.getElementById("demo").innerHTML = "greeting";
+
+}
+else
+{
+document.getElementById("demo").innerHTML = "Sucess";
+} 
+}, 2);
+
+
+
+
+}
+function histimer()
+{
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+ctx.beginPath();
+ctx.rect(50,40,50,50);
+var letters = '0123456789ABCDEF';
+var color = '#';
+for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+ctx.fillStyle = color;
+ctx.fill();
+var s=Math.floor((Math.random() * 100) + 1);
+
+var f=s.toString();
+
+ctx.fillText(f,75,25);
+ctx.closePath();
+return s;
+}
+function myTimer()
+{
+var canvas = document.getElementById("myCanvas");
+
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.rect(130,40,50,50);
+var letters = '0123456789ABCDEF';
+var color = '#';
+for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+ctx.fillStyle = color;
+ctx.fill();
+var s=Math.floor((Math.random() * 100) + 1);
+var f=s.toString();
+ctx.fillText(f,155,25);
+
+ctx.closePath();
+return s;
+}
+function yourTimer()
+{
+var canvas = document.getElementById("myCanvas");
+
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.rect(210,40,50,50);
+var letters = '0123456789ABCDEF';
+var color = '#';
+for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+ctx.fillStyle = color;
+
+
+ctx.fill();
+var s=Math.floor((Math.random() * 100) + 1);
+var f=s.toString();
+ctx.fillText(f,235,25);
+ctx.closePath();
+return s;
+}
+</script>
+</body>
+</html>
