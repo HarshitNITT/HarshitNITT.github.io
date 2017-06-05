@@ -97,6 +97,7 @@ footer a{
 	text-align: center;
 	
 }
+
 body
 {
 
@@ -132,7 +133,7 @@ color:black;
 <p>.                                                                      .</p>
 <p>.                                                                      .<p>
 
-<button class="play_button" onclick="myt()">koi</button>
+<button onclick="myt()" >Click to start</button>
 <canvas id="myCanvas"  width= "1280" height= "800" safeWidth= "1024"
     safeHeight= "720" ></canvas>
 
@@ -183,29 +184,29 @@ ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.rect(380,40,50,50);
-ctx.fillStyle = "green";
-ctx.fill();
+ctx.strokeStyle = "green";
+ctx.stroke();
 var s=Math.floor((Math.random() * 100) + 1);
 var f=s.toString();
-ctx.fillText(f,380,25);
+ctx.fillText(f,405,65);
 ctx.closePath();
 
 
 ctx.beginPath();
 ctx.rect(290,40,50,50);
-ctx.fillStyle = "blue";
-ctx.fill();
+ctx.strokeStyle = "blue";
+ctx.stroke();
 var s=Math.floor((Math.random() * 100) + 1);
 var f=s.toString();
-ctx.fillText(f,290,25);
+ctx.fillText(f,315,65);
 ctx.closePath();
 ctx.beginPath();
 ctx.rect(210,40,50,50);
-ctx.fillStyle = "blue";
-ctx.fill();
+ctx.strokeStyle = "blue";
+ctx.stroke();
 var s=Math.floor((Math.random() * 100) + 1);
 var f=s.toString();
-ctx.fillText(f,210,25);
+ctx.fillText(f,235,65);
 ctx.closePath();
 var m=0;
 
@@ -302,13 +303,13 @@ var color = '#';
 for (var i = 0; i < 6; i++ ) {
             color += letters[Math.floor(Math.random() * 16)];
         }
-ctx.fillStyle = color;
-ctx.fill();
+ctx.strokeStyle = color;
+ctx.stroke();
 var s=Math.floor((Math.random() * 100) + 1);
 
 var f=s.toString();
 
-ctx.fillText(f,380,25);
+ctx.fillText(f,405,65);
 
 var f=m.toString();
 ctx.fillStyle = "black";
@@ -336,11 +337,11 @@ var color = '#';
 for (var i = 0; i < 6; i++ ) {
             color += letters[Math.floor(Math.random() * 16)];
         }
-ctx.fillStyle = color;
-ctx.fill();
+ctx.strokeStyle = color;
+ctx.stroke();
 var s=Math.floor((Math.random() * 100) + 1);
 var f=s.toString();
-ctx.fillText(f,290,25);
+ctx.fillText(f,315,65);
 
 ctx.closePath();
 return s;
@@ -363,13 +364,13 @@ var color = '#';
 for (var i = 0; i < 6; i++ ) {
             color += letters[Math.floor(Math.random() * 16)];
         }
-ctx.fillStyle = color;
+ctx.strokeStyle = color;
 
 
-ctx.fill();
+ctx.stroke();
 var s=Math.floor((Math.random() * 100) + 1);
 var f=s.toString();
-ctx.fillText(f,210,25);
+ctx.fillText(f,235,65);
 ctx.closePath();
 return s;
 }
