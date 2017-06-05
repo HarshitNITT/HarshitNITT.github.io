@@ -64,29 +64,36 @@ padding:auto;
   color: white;
 }
 #nav {
-width:600px;
-margin:0 auto;
-list-style:none;
-
+   
 }
-#nav li {
-float:left;
-
+.inner {
+    margin: 2px;
+    float: left;
+    width: 100px;
+    height: 50px;
+    
 }
-#nav li  a {
-display:block;
-text-align:center;
+.inner a:hover
+{
+color:white;
+}
+.inner a
+{
 color:black;
-width: 150px;
-padding-top:20px;
-padding-bottom:30px;
-text-decoration:none; 
+}
+#container {
+    text-align: center;
 }
 
-#nav li  a:hover {
+#container ul {
+    
+    list-style:none;
+    padding:0;
+    display: inline-block;
+}
 
-
-color:white; 
+#container ul li {
+    display: inline;
 }
 
 footer {
@@ -120,15 +127,17 @@ color:black;
 </style>
 <body>
 
-<ul id="nav">
- 
+  
+<div id="container">
+ <ul>
 			{% for page in site.pages %} {% if page.title %}
-				<li><a href="{{ page.url | prepend: site.baseurl }}" target="_blank">{{ page.title }}</a></li>
+				<li>
+<div class='inner'><a href="{{ page.url | prepend: site.baseurl }}" target="_blank" style="text-decoration:none" ><i>{{ page.title }}</i></a></div></li>
 				{% endif %} {% endfor %}
 				
 			
-	
-</ul>
+</ul>	
+</div>
 <p>.                                                                     .</p>
 <p>.                                                                      .</p>
 <p>.                                                                      .<p>
@@ -153,7 +162,7 @@ color:black;
  
           window.addEventListener('resize', resizeCanvas, false);
           window.addEventListener('orientationchange', resizeCanvas, false);
-          resizeCanvas();
+        //  resizeCanvas();
         }
       }
  
@@ -175,11 +184,42 @@ newGameY = (window.innerHeight - newGameHeight) / 2;
 //canvas.element.style.padding = newGameY + "px " + newGameX + "px";
 canvas.width=newGameWidth;
 canvas.height=newGameHeight;
+  
+ctx = canvas.getContext("2d");
+ var canvas = document.getElementById('myCanvas');
+ctx = canvas.getContext("2d");
 
+ctx.beginPath();
+ctx.rect(380,40,50,50);
+ctx.strokeStyle = "green";
+ctx.stroke();
+var s=Math.floor((Math.random() * 100) + 1);
+var f=s.toString();
+ctx.fillText(f,405,65);
+ctx.closePath();
+
+
+ctx.beginPath();
+ctx.rect(290,40,50,50);
+ctx.strokeStyle = "blue";
+ctx.stroke();
+var s=Math.floor((Math.random() * 100) + 1);
+var f=s.toString();
+ctx.fillText(f,315,65);
+ctx.closePath();
+ctx.beginPath();
+ctx.rect(210,40,50,50);
+ctx.strokeStyle = "blue";
+ctx.stroke();
+var s=Math.floor((Math.random() * 100) + 1);
+var f=s.toString();
+ctx.fillText(f,235,65);
+ctx.closePath();
+var m=0;
   }
 
   
-  
+ var canvas = document.getElementById('myCanvas');
 ctx = canvas.getContext("2d");
 
 ctx.beginPath();
@@ -243,47 +283,16 @@ myTimer();
 function histimer()
 {
 
- 
-    var canvas;
-      var canvasWidth;
-      var ctx;
- 
-      init();
-      function init() {
-        canvas = document.getElementById('myCanvas');
-        if (canvas.getContext) {
-          ctx = canvas.getContext("2d");
- 
-          window.addEventListener('resize', resizeCanvas, false);
-          window.addEventListener('orientationchange', resizeCanvas, false);
-          resizeCanvas();
-        }
-      }
- 
-      function resizeCanvas() {
- 
-var newGameHeight,newGameWidth,newGameY,newGameX;
-	
-if (canvas.height / canvas.width > window.innerHeight / window.innerWidth) {
-  newGameHeight = window.innerHeight;
-  newGameWidth = newGameHeight * canvas.width / canvas.height;
-} else {
-  newGameWidth = window.innerWidth;
-  newGameHeight = newGameWidth * canvas.height /  canvas.width;
-}
-newGameX = (window.innerWidth - newGameWidth) / 2;
-newGameY = (window.innerHeight - newGameHeight) / 2;
+ var canvas = document.getElementById('myCanvas');
 
-// Center the game by setting the padding of the game
-//canvas.element.style.padding = newGameY + "px " + newGameX + "px";
-canvas.width=newGameWidth;
-canvas.height=newGameHeight;
+ctx = canvas.getContext("2d");
+ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  }
+
+
       
   
-  
-ctx = canvas.getContext("2d");
+
 ctx.beginPath();
 ctx.rect(380,40,50,50);
 var letters = '0123456789ABCDEF';
