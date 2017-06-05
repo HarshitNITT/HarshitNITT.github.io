@@ -6,24 +6,7 @@ header
 {
 width: auto;
 }
-header #container {
-        text-align:center;
-        width: 800px;
-        height: 700px;
-        display: table;
-        background-color: #ccc;         
-    }
 
-  header  #container .image-container {
-        text-align: center;
-        vertical-align: middle;
-        display: table-cell;
-    }
-
-    header #container .image-container img {
-        max-width: 500px;
-        max-height: 500px;        
-    }
 .fa {
   padding: 7px;
   font-size: 10px;
@@ -31,7 +14,7 @@ header #container {
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
-  border-radius:50%;
+  border-radius:3px;
 }
 
 .fa:hover {
@@ -58,30 +41,36 @@ header #container {
   color: white;
 }
 #nav {
-width:600px;
-margin:0 auto;
-list-style:none;
-border-bottom: 5px solid grey;
-
+   
 }
-#nav li {
-float:left;
-
+.inner {
+    margin: 2px;
+    float: left;
+    width: 100px;
+    height: 50px;
+    
 }
-#nav li  a {
-display:block;
-text-align:center;
-color:grey;
-width: 150px;
-padding-top:20px;
-padding-bottom:30px;
-text-decoration:none; 
+.inner a:hover
+{
+color:white;
+}
+.inner a
+{
+color:black;
+}
+#container {
+    text-align: center;
 }
 
-#nav li  a:hover {
+#container ul {
+    
+    list-style:none;
+    padding:0;
+    display: inline-block;
+}
 
-background-color:black;
-color:green; 
+#container ul li {
+    display: inline;
 }
 
 footer {
@@ -97,46 +86,48 @@ img.displayed {
     margin-left: auto;
     margin-right: auto;
     margin-top:auto;
-    margin-bottom:auto; 
+    margin-bottom:auto;
+    border:10px inset white;
+    border-radius:20px; 
 }
 body
 {
 
-background: #ffffff; /* Old browsers */
-background: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+background:url("https://s-media-cache-ak0.pinimg.com/originals/b8/f2/82/b8f28256cef0cf4fa13378a7d8eb7a9f.jpg");
 
 }
 </style>
 <body>
   
-<ul id="nav">
- 
+<div id="container">
+ <ul>
 			 
-				<li><a href="/wee/about/" target="_blank">ABOUT</a></li>
+				<li>
+<div class='inner'><a href="/HarshitNITT.github.io/about/" target="_blank" style="text-decoration:none" ><i>ABOUT</i></a></div></li>
 				  
-				<li><a href="/wee/contact/" target="_blank">Contact</a></li>
+				<li>
+<div class='inner'><a href="/HarshitNITT.github.io/contact/" target="_blank" style="text-decoration:none" ><i>Contact</i></a></div></li>
 				  
-				<li><a href="/wee/home/" target="_blank">HOME</a></li>
+				<li>
+<div class='inner'><a href="/HarshitNITT.github.io/home/" target="_blank" style="text-decoration:none" ><i>HOME</i></a></div></li>
 				  
-				<li><a href="/wee/game/" target="_blank">Cherry-jackport game</a></li>
+				<li>
+<div class='inner'><a href="/HarshitNITT.github.io/game/" target="_blank" style="text-decoration:none" ><i>Cherry-jackport game</i></a></div></li>
 				         
 				
 			
-	
-</ul>
+</ul>	
+</div>
+
 
 <p><img class="displayed" src="https://scontent.fblr2-1.fna.fbcdn.net/v/t1.0-9/15941330_1114799311979591_7633563163046205765_n.jpg?oh=d02af95c536071d4e1ef387b5737d91c&oe=59B4A008" >
 </p>
 
 <footer>
-<a href="#"><img class="fa fa-github">     </a>
-<a href="#" class="fa fa-facebook"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-google"></a>
-<a href="#" class="fa fa-linkedin"></a>
+
+<a target="_blank" title="find us on Facebook" href="http://www.facebook.com/PLACEHOLDER"><img alt="follow me on facebook" src="//login.create.net/images/icons/user/facebook_30x30.png" border=0></a>
+<a target="_blank" title="follow me on twitter" href="http://www.twitter.com/PLACEHOLDER"><img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter_30x30.png" border=0></a>
+
 </footer>	
 </body>
 
