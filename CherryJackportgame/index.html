@@ -141,16 +141,25 @@ color:black;
 <p>.                                                                     .</p>
 <p>.                                                                      .</p>
 <p>.                                                                      .<p>
+<p>.                                                                      . <p>
 
-<button onclick="myt()" >Click to start</button>
-<canvas id="myCanvas"  width= "1280" height= "800" safeWidth= "1024"
-    safeHeight= "720" ></canvas>
+<div class="input-group">
+    <div class="input-group-btn">
+        <button type="button" class="btn btn-default">
+<input type="text" class="form-control">
+            <span class="glyphicon glyphicon-search"></span>
+        </button>
+    </div>
+    
+</div>
+<canvas id="myCanvas"  width= "800" height= "400" safeWidth= "600"
+    safeHeight= "300" ></canvas>
 
 
 <script>
 
 
-
+     var m=0;
     var canvas;
       var canvasWidth;
       var ctx;
@@ -215,7 +224,7 @@ var s=Math.floor((Math.random() * 100) + 1);
 var f=s.toString();
 ctx.fillText(f,235,65);
 ctx.closePath();
-var m=0;
+
   }
 
   
@@ -249,27 +258,32 @@ var f=s.toString();
 ctx.fillText(f,235,65);
 ctx.closePath();
 var m=0;
-
+var s;
+var n;
+var y;
+function c()
+{
+if(s==n && n==y)
+m++;
+}
 function myt(){
 var t=0;
 
 var interval = setInterval(function(){
    t++;
 
-   if(t==500)
+   if(t==499)
      {
-
-
-
-
+   c();
+       
       clearInterval(interval);
       }
 
 
-
-histimer();
-yourTimer();
-myTimer(); 
+     s=histimer();
+       n=yourTimer();
+      y=myTimer();
+ 
 
 
  
@@ -389,3 +403,6 @@ ctx.closePath();
 </footer>
 </body>
 </html>
+    
+
+
