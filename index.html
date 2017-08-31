@@ -1,5 +1,116 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>   
 
-<img class="displayed" src="https://scontent.fblr2-1.fna.fbcdn.net/v/t1.0-9/15941330_1114799311979591_7633563163046205765_n.jpg?oh=d02af95c536071d4e1ef387b5737d91c&oe=59B4A008" >
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#test").hide();
+    });
+
+});
+
+$(document).ready(function(){
+
+$('.type-it').typeIt({
+    //strings: ['<span><i><strong>Hello</strong> </i><span><br><span><i>This is Harshit Babbar</i></span><br><span><i>I am a Algorithmic Enthusiast,Web And Data Science lover</i></span><br>']
+     //breakLines: false
+
+    
+});
+ });
+
+ 
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+</head>
+<body >
+<div id="mySidenav" class="sidenav">
+
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ <button>
+ <a href="#" text-align="center"  ><strong><i>Home</i></strong></a>
+</button>
+  <button onclick="about()">
+
+ <a href="#" text-align="center" ><strong><i>About</i></strong></a>
+</button>
+ <button onclick="contact()">
+
+ <a href="#" text-align="center" ><strong><i>Contact</i></strong></a>
+</button>
+</div>
+
+<div id="main">
+  
+<span style="color:#66fcf1 ;cursor:pointer"  onclick="openNav()" font size="130%"><font >&#9776;  Menu </font></span>
+</div>
+<div class="divex">
+</div>
+<div class="terminal">
+<span class="type-it" color="white" ><span style="color:#99FF00">$ </span><span style="color: #FF0033"> Hello</span><br><span style="color:#99FF00 ">$</span> <span style="color: #FF0033">This is</span> <span style="color:#66fcf1 ">Harshit Babbar</span><br><span style="color:#99FF00 ">$ </span><span style="color: #FF0033">I am a Algorithmic Enthusiast,Web And Data Science lover</span>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script> 
+<script src="typeit.js">
+</script> 
+<script>
+function home() {
+    location.reload();
+}
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slide");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+function openNav() {
+  if(document.getElementById("mySidenav").style.width ==="0px" && document.getElementById("main").style.marginRight ==="0px")
+  {
+    document.getElementById("mySidenav").style.width = "13%";
+    document.getElementById("main").style.marginRight = "13%";
+}
+else
+closeNav();
+    
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginRight= "0";
+
+   } 
+function about() {
+    $('.type-it').typeIt({
+    strings:  ['<span style="color:#99FF00" >$ </span><span style="color: #FF0033">I am from </span><span style="color:#66fcf1" >Delhi</span>','<span style="color:#99FF00" >$  </span><span style="color: #FF0033">I completed my high school from </span><a  style="color:#66fcf1;text-decoration:none"  href="#" >DPS Dwarka </a>','<span style="color:#99FF00" >$  </span><span style="color: #FF0033">I am pursuing B.tech in  comp. science from </span> <a style="color:#66fcf1;text-decoration:none"  href="#">NIT Trichy</a>','<span style="color:#99FF00" >$  </span><span style="color: #FF0033">I am interested in </span> <span style="color:#66fcf1"  href="#">Data Science,Linux,Algorithm,Web Development,Open Source</span>'],
+    html:true
+     //breakLines: false
+    
+});    
+    }
+function contact() {
+    $('.type-it').typeIt({
+    strings:  ['<span style="color:#99FF00" >$ </span><span style="color: #FF0033">You Can Contact Me on: </span>','<span style="color:#99FF00" >$  </span><a style="color:#66fcf1;text-decoration:none"  href="#">Facebook </a>','<span style="color:#99FF00" >$  </span><a style="color:#66fcf1;text-decoration:none"  href="#" >Twitter </a>','<span style="color:#99FF00" >$  </span><a style="color:#66fcf1;text-decoration:none"  href="#" >google </a>','<span style="color:#99FF00" >$  </span><a style="color:#66fcf1;text-decoration:none"   href="#">LinkedIn </a>'],
+    html:true
+     //breakLines: false
+    
+});    
+    }
+</script>
+     
+</body>
+</html> 
