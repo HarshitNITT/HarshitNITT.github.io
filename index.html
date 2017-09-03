@@ -2,7 +2,11 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+
+
 <script>   
 
 $(document).ready(function(){
@@ -29,25 +33,31 @@ $('.type-it').typeIt({
 </head>
 </head>
 <body >
-<div id="mySidenav" class="sidenav">
 
-   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
- <button>
- <a href="#" text-align="center"  ><strong><i>Home</i></strong></a>
-</button>
-  <button onclick="about()">
-
- <a href="#" text-align="center" ><strong><i>About</i></strong></a>
-</button>
- <button onclick="contact()">
-
- <a href="#" text-align="center" ><strong><i>Contact</i></strong></a>
-</button>
-</div>
 
 <div id="main">
   
-<span style="color:#66fcf1 ;cursor:pointer"  onclick="openNav()" font size="130%"><font >&#9776;  Menu </font></span>
+<span style="color:#9c0 ;cursor:pointer"  onclick="openNav()" >&#9776;  </span>
+</div>
+
+<div id="mySidenav" class="sidenav">
+
+   <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+<button>
+ <a href="#" text-align="center"  > <span style="color:#9c0"  ><i class="fa fa-home" aria-hidden="true"></i>
+   Home</span></a>
+</button> 
+  
+<button onclick="about()"> 
+ <a href="#" text-align="center" > <span style="color:#9c0" ><i class="fa fa-user" aria-hidden="true"></i>
+  About</span></a>
+</button>
+
+<button onclick="contact()"> 
+
+ <a href="#" text-align="center"   ><span style="color:#9c0" ><i class="fa fa-phone" aria-hidden="true"></i>
+ Contact</span></a>
+</button>
 </div>
 <div class="divex">
 </div>
@@ -96,7 +106,7 @@ function closeNav() {
    } 
 function about() {
     $('.type-it').typeIt({
-    strings:  ['<span style="color:#99FF00" >$ </span><span style="color: #FF0033">I am from </span><span style="color:#66fcf1" >Delhi</span>','<span style="color:#99FF00" >$  </span><span style="color: #FF0033">I completed my high school from </span><a target="_blank"  style="color:#66fcf1;text-decoration:none"  href="http://www.dpsdwarka.com/dpsdwarka/" >DPS Dwarka </a>','<span style="color:#99FF00" >$  </span><span style="color: #FF0033">I am pursuing B.tech in  comp. science from </span> <a style="color:#66fcf1;text-decoration:none" target="_blank" href="https://www.nitt.edu/">NIT Trichy</a>','<span style="color:#99FF00" >$  </span><span style="color: #FF0033">I am interested in </span> <span style="color:#66fcf1"  href="#">Data Science,Linux,Algorithm,Web Development,Open Source</span>'],
+    strings:  ['<span style="color:#99FF00" >$ </span><span style="color: #FF0033">I am from </span><span style="color:#66fcf1" >Delhi</span>','<span style="color:#99FF00" >$  </span><span style="color: #FF0033">I completed my high school from </span><a  style="color:#66fcf1;text-decoration:none" target="_blank" href="http://www.dpsdwarka.com/dpsdwarka/" >DPS Dwarka </a>','<span style="color:#99FF00" >$  </span><span style="color: #FF0033">I am pursuing B.tech in  comp. science from </span> <a style="color:#66fcf1;text-decoration:none" target="_blank" href="https://www.nitt.edu/">NIT Trichy</a>','<span style="color:#99FF00" >$  </span><span style="color: #FF0033">I am interested in </span> <span style="color:#66fcf1"  >Data Science,Linux,Algorithm,Web Development,Open Source</span>'],
     html:true
      //breakLines: false
     
@@ -104,7 +114,7 @@ function about() {
     }
 function contact() {
     $('.type-it').typeIt({
-    strings:  ['<span style="color:#99FF00" >$ </span><span style="color: #FF0033">You Can Contact Me on: </span>','<span style="color:#99FF00" >$  </span><a target="_blank" style="color:#66fcf1;text-decoration:none"  href="https://www.facebook.com/harshit.babbar.37">Facebook </a>','<span style="color:#99FF00" >$  </span><a target="_blank" style="color:#66fcf1;text-decoration:none"  href="https://twitter.com/harshit_1238" >Twitter </a>','<span style="color:#99FF00" >$  </span><a target="_blank" style="color:#66fcf1;text-decoration:none"  href="https://github.com/HarshitNITT" >github </a>','<span style="color:#99FF00" >$  </span><a target="_blank" style="color:#66fcf1;text-decoration:none"   href="https://www.linkedin.com/in/harshit-babbar-371660125/">LinkedIn </a>'],
+    strings:  ['<span style="color:#99FF00" >$ </span><span style="color: #FF0033">You Can Contact Me on: </span>','<span style="color:#99FF00" >$  </span><a target="_blank" style="color:#66fcf1;text-decoration:none" target="_blank" href="https://www.facebook.com/harshit.babbar.37">Facebook </a><i class="fa fa-facebook-square" style="font-size:11px"></i>','<span style="color:#99FF00" >$  </span><a style="color:#66fcf1;text-decoration:none" target="_blank"  href="https://twitter.com/harshit_1238" >Twitter </a><i class="fa fa-twitter-square" style="font-size:11px" ></i>','<span style="color:#99FF00" >$  </span><a target="_blank" style="color:#66fcf1;text-decoration:none"  href="https://github.com/HarshitNITT" >github <i class="fa fa-github" style="font-size:11px"></i></a>','<span style="color:#99FF00" >$  </span><a target="_blank" style="color:#66fcf1;text-decoration:none"   href="https://www.linkedin.com/in/harshit-babbar-371660125/">LinkedIn </a><i class="fa fa-linkedin-square" style="font-size:11px"></i>'],
     html:true
      //breakLines: false
     
@@ -113,4 +123,4 @@ function contact() {
 </script>
      
 </body>
-</html> 
+</html>  
