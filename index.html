@@ -29,20 +29,32 @@ $('.type-it').typeIt({
  
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles1.css">
 </head>
 </head>
 <body >
+<ul>
+  <li><a href="#home" style="font-size: 127%" >Home</font></a></li>
+  <li><a href="#news" onclick="about()" style="font-size: 127%">About</a></li>
+  <li><a href="#news" onclick="contact()" style="font-size: 127%">Contact</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn" style="font-size: 127%">Projects</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+</ul>
 
-
-<div id="main">
+<!--  <div id="main">
   
 <span style="color:#9c0 ;cursor:pointer"  onclick="openNav()" >&#9776;  </span>
 </div>
 
 <div id="mySidenav" class="sidenav">
 
-   <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+  
 <button>
  <a href="#" text-align="center"  > <span style="color:#9c0"  ><i class="fa fa-home" aria-hidden="true"></i>
    Home</span></a>
@@ -58,9 +70,9 @@ $('.type-it').typeIt({
  <a href="#" text-align="center"   ><span style="color:#9c0" ><i class="fa fa-phone" aria-hidden="true"></i>
  Contact</span></a>
 </button>
-</div>
+</div> -->
 <div class="divex">
-</div>
+</div> 
 <div class="terminal">
 <span class="type-it" color="white" ><span style="color:#99FF00">$ </span><span style="color: #FF0033"> Hello</span><br><span style="color:#99FF00 ">$</span> <span style="color: #FF0033">This is</span> <span style="color:#66fcf1 ">Harshit Babbar</span><br><span style="color:#99FF00 ">$ </span><span style="color: #FF0033">I am a Algorithmic Enthusiast,Web And Data Science lover</span>
 </div>
@@ -123,4 +135,4 @@ function contact() {
 </script>
      
 </body>
-</html>  
+</html>
