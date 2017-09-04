@@ -101,8 +101,9 @@ background-image: url("http://deteyeontwerp.nl/wp-content/uploads/2016/08/notebo
   margin:0 auto;
  padding:30px;
  border-top:17px solid #4d4d4d ;
-  background-color:black;
-  opacity:0.7;
+  background-color:rgba(0,0,0,0.65);
+  /*opacity:0.5;*/
+   /*box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);*/
  vertical-align: middle;
   border-radius:5px;
   color:white;
@@ -112,7 +113,7 @@ background-image: url("http://deteyeontwerp.nl/wp-content/uploads/2016/08/notebo
 }
 .terminal span
 {
-  font-size: 100%;
+  font-size: 122%;
   font-family: 'Inconsolata',serif;
 }
 .sidenav span:hover
@@ -121,7 +122,7 @@ background-image: url("http://deteyeontwerp.nl/wp-content/uploads/2016/08/notebo
 }
 span
 {
-  font-size: 140%;
+  font-size: 100%;
   right:0;
   font-family: 'Inconsolata',serif;
 }
@@ -190,6 +191,7 @@ li.dropdown {
     min-width: 80px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border-radius: 2px;
 }
 
 .dropdown-content a {
@@ -198,6 +200,7 @@ li.dropdown {
     text-decoration: none;
     display: block;
     text-align: center;
+
 }
 
 .dropdown-content a:hover {color: #9c0;}
@@ -230,3 +233,4 @@ button a:hover
     /* Green */
     color: white !important;
 }
+
