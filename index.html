@@ -6,7 +6,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   
  <title>Harshit Babbar </title>
-    <link rel="shortcut icon" type="image/png" href="symbol.jpg"/>
+    <link rel="shortcut icon" type="image/png" href="symbol.jpg"  />
 
 <script>   
 
@@ -19,11 +19,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-$('.type-it').typeIt({
-    //strings: ['<span><i><strong>Hello</strong> </i><span><br><span><i>This is Harshit Babbar</i></span><br><span><i>I am a Algorithmic Enthusiast,Web And Data Science lover</i></span><br>']
-     //breakLines: false
-
-    
+$('.type-it').typeIt({    
 });
  });
 
@@ -35,11 +31,11 @@ $('.type-it').typeIt({
 </head>
 <body >
 <ul>
-  <li><a href="#home" style="font-size: 127%" >Home</font></a></li>
-  <li><a href="#About" onclick="about()" style="font-size: 127%">About</a></li>
-  <li><a href="#Contact" onclick="contact()" style="font-size: 127%">Contact</a></li>
+  <li><a href="#home" style="font-size: 127%" id="home" onclick="home()"><strong>Home</strong></a></li>
+  <li><a href="#About" onclick="about()" style="font-size: 127%" id="about"><strong>About</strong></a></li>
+  <li><a href="#Contact" onclick="contact()" style="font-size: 127%" id="contact"><strong>Contact</strong></a></li>
   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn" style="font-size: 127%">Projects</a>
+    <a href="javascript:void(0)" class="dropbtn" style="font-size: 127%" ><strong>Projects</strong></a>
     <div class="dropdown-content">
       <a href="#">Link 1</a>
       <a href="#">Link 2</a>
@@ -48,34 +44,11 @@ $('.type-it').typeIt({
   </li>
 </ul>
 
-<!--  <div id="main">
-  
-<span style="color:#9c0 ;cursor:pointer"  onclick="openNav()" >&#9776;  </span>
-</div>
 
-<div id="mySidenav" class="sidenav">
-
-  
-<button>
- <a href="#" text-align="center"  > <span style="color:#9c0"  ><i class="fa fa-home" aria-hidden="true"></i>
-   Home</span></a>
-</button> 
-  
-<button onclick="about()"> 
- <a href="#" text-align="center" > <span style="color:#9c0" ><i class="fa fa-user" aria-hidden="true"></i>
-  About</span></a>
-</button>
-
-<button onclick="contact()"> 
-
- <a href="#" text-align="center"   ><span style="color:#9c0" ><i class="fa fa-phone" aria-hidden="true"></i>
- Contact</span></a>
-</button>
-</div> -->
 <div class="divex">
 </div> 
 <div class="terminal">
-<span class="type-it" color="white" ><span style="color:#99FF00">$ </span><span style="color: white"> Hello</span><br><span style="color:#99FF00 ">$</span> <span style="color: white">This is</span> <span style="color:#66fcf1 ">Harshit Babbar</span><br><span style="color:#99FF00 ">$ </span><span style="color: white">I am a Algorithmic Enthusiast,Web And Data Science lover</span>
+<span class="type-it" color="white" ><span style="color:#99FF00">$ </span><span style="color: white"> Hello</span><br><span style="color:#99FF00 ">$</span> <span style="color: white">This is</span> <span style="color:#66fcf1 ">Harshit Babbar    </span><img src="https://scontent.fmaa2-1.fna.fbcdn.net/v/t1.0-9/17342915_272428909847866_8358695884602849750_n.jpg?oh=fceda484387cb2b5ff977449eec232d0&oe=5A149D16"  style="border-radius: 20%" height='13%' width="7%"><br>  <span></span><span style="color:#99FF00 ">$ </span><span style="color: white">I am a Algorithmic Enthusiast,Web And Data Science lover</span>
 </div>
 
 
@@ -84,40 +57,62 @@ $('.type-it').typeIt({
 <script src="typeit.js">
 </script> 
 <script>
-function home() {
-    location.reload();
-}
-var myIndex = 0;
-carousel();
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("slide");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-function openNav() {
-  if(document.getElementById("mySidenav").style.width ==="0px" && document.getElementById("main").style.marginRight ==="0px")
-  {
-    document.getElementById("mySidenav").style.width = "13%";
-    document.getElementById("main").style.marginRight = "13%";
-}
-else
-closeNav();
+
+
+
+
+function home()
+{
+// location.reload();
+  // $('#home').on('click',function() {
+         $('#about').css({
+        'border-bottom': '0px solid white',
+        'color':'#888888'
+       
+    });
+     $('#contact').css({
+        'border-bottom': '0px solid white',
+        'color':'#888888'
+       
+    });
+    $('#home').css({
+        'border-bottom': '2px solid white',
+        'color':'white'
+       
+    });
+    $('.type-it').typeIt({
+    strings:  ['<span style="color:#99FF00">$ </span><span style="color: white"> Hello</span>','<span style="color:#99FF00 ">$</span> <span style="color: white">This is</span> <span style="color:#66fcf1 ">Harshit Babbar    </span> ','<span></span><span style="color:#99FF00 ">$ </span><span style="color: white">I am a Algorithmic Enthusiast,Web And Data Science lover</span>'],
+    html:true
+     //breakLines: false
     
+}); 
+//   $('.type-it').typeIt({
+//     strings:  ['<span style="color:#99FF00" >$ </span><span style="color: white">I am from </span><span style="color:#66fcf1" >Delhi</span>','<span style="color:#99FF00" >$  </span><span style="color: white">I completed my high school from </span><a  style="color:#66fcf1;text-decoration:none" target="_blank" href="http://www.dpsdwarka.com/dpsdwarka/" >DPS Dwarka </a>','<span style="color:#99FF00" >$  </span><span style="color: white">I am pursuing B.tech in  comp. science from </span> <a style="color:#66fcf1;text-decoration:none" target="_blank" href="https://www.nitt.edu/">NIT Trichy</a>','<span style="color:#99FF00" >$  </span><span style="color:white">I am interested in </span> <span style="color:#66fcf1"  >Data Science,Linux,Algorithm,Web Development,Open Source</span>'],
+//     html:true
+//      //breakLines: false
+    
+// });
 }
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginRight= "0";
-
-   } 
 function about() {
+  // location.reload();
+   // $('#about').on('click',function() {
+     $('#home').css({
+        'border-bottom': '0px solid white',
+        'color':'#888888'
+       
+    });
+     $('#contact').css({
+        'border-bottom': '0px solid white',
+        'color':'#888888'
+       
+    });
+    $('#about').css({
+        'border-bottom': '2px solid white',
+        'color':'white'
+       
+    });
+// });
     $('.type-it').typeIt({
     strings:  ['<span style="color:#99FF00" >$ </span><span style="color: white">I am from </span><span style="color:#66fcf1" >Delhi</span>','<span style="color:#99FF00" >$  </span><span style="color: white">I completed my high school from </span><a  style="color:#66fcf1;text-decoration:none" target="_blank" href="http://www.dpsdwarka.com/dpsdwarka/" >DPS Dwarka </a>','<span style="color:#99FF00" >$  </span><span style="color: white">I am pursuing B.tech in  comp. science from </span> <a style="color:#66fcf1;text-decoration:none" target="_blank" href="https://www.nitt.edu/">NIT Trichy</a>','<span style="color:#99FF00" >$  </span><span style="color:white">I am interested in </span> <span style="color:#66fcf1"  >Data Science,Linux,Algorithm,Web Development,Open Source</span>'],
     html:true
@@ -126,10 +121,27 @@ function about() {
 });    
     }
 function contact() {
+   // $('#contact').on('click',function() {
+    // location.reload();
+        $('#home').css({
+        'border-bottom': '0px solid white',
+        'color':'#888888'
+       
+    });
+     $('#about').css({
+        'border-bottom': '0px solid white',
+        'color':'#888888'
+       
+    });
+    $('#contact').css({
+        'border-bottom': '2px solid white',
+        'color':'white'
+       
+    });
+// });
     $('.type-it').typeIt({
-    strings:  ['<span style="color:#99FF00" >$ </span><span style="color: white">You Can Contact Me on: </span>','<span style="color:#99FF00" >$  </span><a target="_blank" style="color:#66fcf1;text-decoration:none" target="_blank" href="https://www.facebook.com/harshit.babbar.37">Facebook </a><i class="fa fa-facebook-square" style="font-size:14px"></i>','<span style="color:#99FF00" >$  </span><a style="color:#66fcf1;text-decoration:none" target="_blank"  href="https://twitter.com/harshit_1238" >Twitter </a><i class="fa fa-twitter-square" style="font-size:14px" ></i>','<span style="color:#99FF00" >$  </span><a target="_blank" style="color:#66fcf1;text-decoration:none"  href="https://github.com/HarshitNITT" >github <i class="fa fa-github" style="font-size:14px"></i></a>','<span style="color:#99FF00" >$  </span><a target="_blank" style="color:#66fcf1;text-decoration:none"   href="https://www.linkedin.com/in/harshit-babbar-371660125/">LinkedIn </a><i class="fa fa-linkedin-square" style="font-size:14px"></i>'],
+    strings:  ['<span style="color:#99FF00" >$ </span><span style="color: white">You Can Contact Me on: </span>','<span style="color:#99FF00" >$  </span><a target="_blank" style="color:#66fcf1;text-decoration:none" target="_blank" href="https://www.facebook.com/harshit.babbar.37">Facebook <i class="fa fa-facebook-square" style="font-size:17px;background-color:rgba(59,89,152,1);color:white "></i></a>','<span style="color:#99FF00" >$  </span><a style="color:#66fcf1;text-decoration:none" target="_blank"  href="https://twitter.com/harshit_1238" >Twitter <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-twitter-128.png" style="height:7%;width:3.4%;border-radius: 5% "></a> ','<span style="color:#99FF00" >$  </span><a target="_blank" style="color:#66fcf1;text-decoration:none"  href="https://github.com/HarshitNITT" >github <i class="fa fa-github" style="font-size:17px;color:#787878"></i></a>','<span style="color:#99FF00" >$  </span><a target="_blank" style="color:#66fcf1;text-decoration:none"   href="https://www.linkedin.com/in/harshit-babbar-371660125/">LinkedIn <img style="height:8%;width:4%"src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-256.png"></a>'],
     html:true
-     //breakLines: false
     
 });    
     }
